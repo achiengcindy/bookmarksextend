@@ -9,9 +9,8 @@ from . import views
 urlpatterns = [
     # url(r'^login/$', views.user_login, name='login'),
     url(r'^$', views.dashboard, name='dashboard'),
-
-    #url(r'^register/$', views.register, name='register'),
-    #url(r'^edit/$', views.edit, name='edit'),
+    url(r'^register/$', views.register, name='register'),
+    url(r'^edit/$', views.edit, name='edit'),
 
     # login / logout urls
     url(r'^login/$', auth_views.login, name='login'),
@@ -29,5 +28,5 @@ urlpatterns = [
     url(r'^password-reset/confirm/$', auth_views.password_reset_complete, name='password-reset/confirm'),
     url(r'^password-reset/complete/$', auth_views.password_reset_complete, name='password_reset_complete'),
 
-    url(r'^register/$', views.register, name='register'),
+
 ]
