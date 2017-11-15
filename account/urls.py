@@ -1,5 +1,6 @@
 from django.conf.urls import url
-from django.contrib.auth.views import login, logout
+#from django.contrib.auth.views import login, logout
+from django.contrib.auth import views as auth_views
 
 
 from . import views
@@ -13,8 +14,12 @@ urlpatterns = [
     #url(r'^edit/$', views.edit, name='edit'),
 
     # login / logout urls
-    url(r'^login/$', login, {'template_name': 'registration/login.html'}, name='login'),
-    url(r'^logout/$', logout, {'template_name': 'registration/logged_out.html'}, name='logout'),
+    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^logout-then-login/$', auth_views.logout_then_login, name='logout-then-login'),
+    
+    #url(r'^login/$', login, {'template_name': 'registration/login.html'}, name='login'),
+    #url(r'^logout/$', logout, {'template_name': 'registration/logged_out.html'}, name='logout'),
     #url(r'^logout-then-login/$',logout-then-login,{'template_name': 'logout-then-login.html'}, name='mysite_logout-then-login')
 
     # change password urls

@@ -127,8 +127,9 @@ STATICFILES_DIRS = (
 )
 
 
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-#LOGIN_REDIRECT_URL = 'dashboard'
+from django.core.urlresolvers import reverse_lazy
+LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
+LOGIN_URL = reverse_lazy('login')
+LOGOUT_URL = reverse_lazy('logout')
 
 #CRISPY_TEMPLATE_PACK = 'bootstrap3'
