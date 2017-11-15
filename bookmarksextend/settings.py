@@ -31,13 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'account',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'account',
+    
 ]
 
 MIDDLEWARE = [
@@ -126,8 +127,8 @@ STATICFILES_DIRS = (
 )
 
 
-#LOGIN_URL = 'mysite_login'
-#LOGOUT_URL = 'mysite_logout'
-#LOGIN_REDIRECT_URL = 'lovebookmarks_bookmark_list'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+#LOGIN_REDIRECT_URL = 'dashboard'
 
 #CRISPY_TEMPLATE_PACK = 'bootstrap3'

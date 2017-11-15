@@ -25,3 +25,11 @@ def user_login(request):
         form = LoginForm()
     context = {'form': form}
     return render(request, 'account/login.html', context )
+
+@login_required
+def dashboard(request):
+    context = {'section': 'dashboard'}
+    return render(request,'account/dashboard.html', context)
+
+
+
