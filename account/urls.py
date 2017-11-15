@@ -28,4 +28,6 @@ urlpatterns = [
     url(r'^password-reset/done/$', auth_views.password_reset_done, name='password_reset_done'),
     url(r'^password-reset/confirm/$', auth_views.password_reset_complete, name='password-reset/confirm'),
     url(r'^password-reset/complete/$', auth_views.password_reset_complete, name='password_reset_complete'),
+
+    url(r'^register/$', views.register, name='register'),
 ]
